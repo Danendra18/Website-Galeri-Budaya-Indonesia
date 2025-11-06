@@ -1,0 +1,396 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #ffffff, #ffeaea);
+  color: #333;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 40px;
+  border-bottom: 2px solid #ff0000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-out;
+}
+
+header .logo {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #d32f2f;
+  /* Menghapus efek glow */
+  text-shadow: none;
+  animation: none;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+header nav ul li a:hover {
+  color: #c62828;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  font-size: 2em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Artikel */
+.artikel {
+  display: flex;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1000px;
+  border-bottom: 1px solid #ddd;
+}
+
+.artikel img {
+  width: 300px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.artikel .content h2 {
+  color: #c62828;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.artikel .content p {
+  color: #444;
+}
+
+/* Karya Anak Bangsa */
+.karya {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.karya h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery .item {
+  text-align: center;
+  width: 30%;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c62828;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #c62828;
+  padding: 8px 16px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.read-more::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #c62828;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.read-more:hover::before {
+  left: 0;
+}
+
+.read-more:hover {
+  color: white;
+  transform: scale(1.05); 
+}
+
+.karya {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.karya h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.item p {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #444;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header,
+.hero,
+.artikel,
+.karya {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+header {
+  animation-delay: 0.2s;
+}
+
+.hero {
+  animation-delay: 0.4s;
+}
+
+.artikel:nth-of-type(1) {
+  animation-delay: 0.6s;
+}
+
+.artikel:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+.artikel:nth-of-type(3) {
+  animation-delay: 1s;
+}
+
+.karya {
+  animation-delay: 1.2s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 70%;
+  font-size: 35px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+
+/* Saat tombol muncul */
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover efek */
+#scrollTopBtn:hover {
+  background-color: #b71c1c;
+  transform: scale(1.15);
+}
+
+/* Animasi ikon panah */
+.arrow-up {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+#scrollTopBtn:hover .arrow-up {
+  transform: translateY(-4px);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #fafafa, #f4f4f4);
+  color: #333;
+  margin: 0;
+}
+
+/* Divider dekoratif */
+.divider {
+  border: 0;
+  height: 2px;
+  width: 80%;
+  margin: 40px auto;
+  background: linear-gradient(to right, #c62828, transparent);
+  border-radius: 2px;
+}
+
+/* Efek muncul */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol ke atas */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+#scrollTopBtn:hover {
+  transform: scale(1.1);
+  background-color: #a91f1f;
+}
+#scrollTopBtn.show {
+  opacity: 1;
+}
+
+footer {
+  background-color: #c62828; /* Merah seperti di contoh */
+  color: white;              /* Teks putih */
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek halus muncul saat halaman dimuat */
+footer p {
+  animation: fadeInFooter 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Budaya Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">Galeri Budaya Indonesia</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profil.html">Profile</a></li>
+        <li><a href="budaya.html">Budaya</a></li>
+        <li><a href="seni.html">Seni</a></li>
+        <li><a href="peng.html">Penghargaan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <img src="C:\Users\danendra\Downloads\web sekul tes 2/barong-bali.gif">
+    <div class="hero-text fade-in">
+      <h1>Wajah Kita<br>Dalam Rupa</h1>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== ARTIKEL ===== -->
+  <section class="artikel fade-in">
+    <img src="C:\Users\danendra\Downloads\web sekul tes 2/2.png">
+    <div class="content">
+      <h2>Selain Memikat dengan Wisata,<br>Jogja Istimewa Sebagai Kota Batik Dunia</h2>
+      <p>Yogyakarta dikenal bukan hanya sebagai kota budaya dan wisata, tapi juga sebagai salah satu pusat batik paling berpengaruh di dunia...</p>
+      <a href="https://akademipariwisata.co.id/selain-memikat-dengan-wisata-jogja-istimewa-sebagai-kota-batik-dunia/"
+         target="_blank" class="read-more">Baca Selengkapnya</a>
+    </div>
+  </section>
+
+  <!-- ===== Tambahkan Divider untuk pemisah antar artikel ===== -->
+  <hr class="divider">
+
+  <!-- ===== ARTIKEL 2 ===== -->
+  <section class="artikel fade-in">
+    <img src="C:\Users\danendra\Downloads\web sekul tes 2/3.jpeg">
+    <div class="content">
+      <h2>Perjuangan Indonesia Pulangkan Fosil Sang “Java Man”...</h2>
+      <p>Pemerintah Indonesia sudah berusaha berusaha memulangkan artefak Pithecanthropus Erectus atau yang dikenal dengan nama Homo Erectus sejak 1951. 74 tahun berlalu, usaha itu baru berhasil tahun ini...</p>
+      <a href="https://www.detik.com/pop/culture/d-8141873/perjuangan-indonesia-pulangkan-fosil-sang-java-man-segera-dipajang-di-mni"
+         target="_blank" class="read-more">Baca Selengkapnya</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== ARTIKEL 3 ===== -->
+  <section class="artikel fade-in">
+    <img src="C:\Users\danendra\Downloads\web sekul tes 2/4.jpeg">
+    <div class="content">
+      <h2>Lukisan ‘Food Monster’ Mulyana The Mogus Mejeng di Jakarta</h2>
+      <p>Bayangkan kalau piring sebagai kanvas dan hidangan diubah jadi karya seni? Itulah yang dilakukan oleh Mulyana atau dikenal dengan nama Mang Moel...</p>
+      <a href="https://www.detik.com/pop/culture/d-8139999/lukisan-food-monster-mulyana-the-mogus-mejeng-di-jakarta"
+         target="_blank" class="read-more">Baca Selengkapnya</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== GALERI ===== -->
+  <section class="karya fade-in">
+    <h2>Karya Anak Bangsa</h2>
+    <div class="gallery">
+      <div class="item">
+        <a href="https://id.wikipedia.org/wiki/Affandi" target="_blank">
+          <img src="C:\Users\danendra\Downloads\web sekul tes 2/lukisann.png" alt="Affandi - Ibuka">
+        </a>
+        <p>Ibuka – <strong>Affandi</strong></p>
+      </div>
+
+      <div class="item">
+        <a href="https://id.wikipedia.org/wiki/Hendra_Gunawan_(pelukis)" target="_blank">
+          <img src="C:\Users\danendra\Downloads\web sekul tes 2/lukisan 2.png" alt="Pengantin Revolusi - Hendra Gunawan">
+        </a>
+        <p>Pengantin Revolusi – <strong>Hendra Gunawan</strong></p>
+      </div>
+
+      <div class="item">
+        <a href="https://id.wikipedia.org/wiki/Affandi" target="_blank">
+          <img src="C:\Users\danendra\Downloads\web sekul tes 2/ganteng 2.png" alt="Self Portrait and His Pipe – Affandi">
+        </a>
+        <p>Self Portrait and His Pipe – <strong>Affandi</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Galeri Budaya Indonesia</p>
+  </footer>
+
+  <!-- ===== TOMBOL KE ATAS ===== -->
+  <button id="scrollTopBtn" title="Kembali ke atas">
+    <span class="arrow-up">↑</span>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
+    });
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>

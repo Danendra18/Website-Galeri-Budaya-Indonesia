@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* bar atas putih */
+  color: #c62828;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #c62828;
+}
+
+header .logo span {
+  color: #c62828;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #c62828;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Efek hover glowing */
+nav ul li a:hover {
+  color: #e53935;
+  text-shadow: 0 0 8px #ff5252, 0 0 15px #ff8a80;
+}
+
+/* Link aktif */
+nav ul li a.active {
+  color: #e53935;
+  border-bottom: 2px solid #e53935;
+}
+
+/* ===== PROFILE SECTION ===== */
+.profile-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #c62828;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #c62828;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Boxes */
+.profile-box,
+.content,
+.design-box,
+.explore {
+  background: #fff;
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-box:hover,
+.content:hover,
+.design-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(198, 40, 40, 0.25);
+}
+
+/* Layout dua kolom */
+.content-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #666;
+}
+
+.design-box img {
+  width: 50%;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* efek halus */
+}
+
+.design-box img:hover {
+  transform: scale(1.1); /* memperbesar 10% */
+  box-shadow: 0 8px 20px rgba(198, 40, 40, 0.3); /* bayangan saat hover */
+}
+
+.explore {
+  text-align: center;
+  font-style: italic;
+  background: #ffebee;
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.4s ease;
+}
+
+/* Buat agar seluruh area klik bisa aktif */
+.explore a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Efek hover explore */
+.explore:hover {
+  transform: scale(1.05);
+  background: #2196f3; /* biru */
+  color: white;
+  border-color: #1976d2;
+  box-shadow: 0 8px 20px rgba(33, 150, 243, 0.4);
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #c62828;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+/* ===== ANIMASI ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* ===== DESAIN LOGO SECTION ===== */
+.logo-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.logo-box {
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 35px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.15);
+}
+
+.logo-box img {
+  width: 60%;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Kartu penjelasan */
+.card {
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(198, 40, 40, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(198, 40, 40, 0.25);
+}
+
+.card h3 {
+  color: #c62828;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c62828;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card p {
+  text-align: justify;
+  color: #333;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .logo-box img {
+    width: 90%;
+  }
+}

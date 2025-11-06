@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penghargaan Budaya dan Seni di Indonesia</title>
+  <link rel="stylesheet" href="style2.css" />
+  <style>
+
+     h3 a {
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      transition: color 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    h3 a:hover {
+      color: #007BFF;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .info {
+      position: relative;
+      z-index: 1;
+    }
+    /* === Gaya khusus halaman Penghargaan === */
+    .judul {
+      text-align: center;
+      margin: 60px 0 30px;
+      animation: fadeUp 1s ease-out;
+    }
+
+    .judul h1 {
+      color: #d32f2f;
+      font-size: 2.4em;
+      text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.4);
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background: #fff;
+      border: 2px solid #d32f2f;
+      border-radius: 12px;
+      padding: 20px;
+      gap: 20px;
+      animation: fadeSlide 1s forwards;
+    }
+
+    .row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .row img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .row img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+      align-self: center;
+    }
+
+    .info h3 a {
+      text-decoration: none;
+      color: #d32f2f;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .info h3 a:hover {
+      color: #007BFF;
+      transform: scale(1.05);
+    }
+
+    .info p {
+      margin-top: 10px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Tombol ke atas */
+    #toTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #d32f2f;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: none;
+      z-index: 999;
+    }
+
+    #toTop:hover {
+      background: #ff0000;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Galeri Budaya Indonesia</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profil.html">Profile</a>
+      <a href="budaya.html">Budaya</a>
+      <a href="seni.html">Seni</a>
+      <a href="peng.html" class="active">Penghargaan</a>
+    </nav>
+  </header>
+
+  <section class="judul">
+    <h1>PENGHARGAAN BUDAYA DAN SENI DI INDONESIA</h1>
+    <p>Daftar berbagai bentuk penghargaan dan pengakuan dunia terhadap warisan budaya dan seni Indonesia.</p>
+  </section>
+
+  <main class="container">
+
+    <div class="row">
+      <img src="C:\Users\danendra\Downloads\web sekul tes 2\pb.jpg" alt="Penghargaan terhadap Batik">
+      <div class="info">
+        <h3><a href="https://nasional.kompas.com/read/2017/10/02/08144021/2-oktober-2009-unesco-akui-batik-sebagai-warisan-dunia-dari-indonesia" target="_blank">Informasi mengenai Batik</a></h3>
+        <p>Penghargaan utama yang diterima batik adalah pengakuan oleh UNESCO pada 2 Oktober 2009 sebagai Warisan Kemanusiaan untuk Budaya Lisan dan Nonbendawi (Intangible Cultural Heritage). Pengakuan ini menjadikan batik sebagai simbol kebanggaan nasional Indonesia, yang diperingati setiap tanggal 2 Oktober sebagai Hari Batik Nasional. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img src="C:\Users\danendra\Downloads\web sekul tes 2\ke.jpg" alt="Penghargaan terhadap Keris">
+      <div class="info">
+        <h3><a href="https://suarapemerintah.id/2024/11/19-tahun-keris-indonesia-diakui-unesco-sebagai-warisan-budaya-dunia/" target="_blank">Informasi mengenai Keris</a></h3>
+        <p>Keris Indonesia mendapatkan pengakuan dari UNESCO sebagai Masterpiece of the Oral and Intangible Heritage of Humanity (Karya Agung Budaya Takbenda Warisan Kemanusiaan) pada tanggal 25 November 2005. Penghargaan ini mengukuhkan keris bukan hanya sebagai senjata, tetapi juga sebagai warisan budaya dunia yang sarat makna, filosofi, dan nilai seni. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img src="C:\Users\danendra\Downloads\web sekul tes 2\wa.jpg" alt="Penghargaan terhadap Wayang">
+      <div class="info">
+        <h3><a href="https://dlh.bulelengkab.go.id/informasi/detail/berita_instansi/unesco-tetapkan-wayang-wong-tejakula-sebagai-warisan-budaya-51" target="_blank">Informasi mengenai Wayang</a></h3>
+        <p>Penghargaan UNESCO untuk wayang adalah pengakuan terhadap Wayang sebagai Masterpiece of the Oral and Intangible Heritage of Humanity (Mahakarya Warisan Budaya Lisan dan Takbenda Kemanusiaan) yang ditetapkan pada 7 November 2003. Penghargaan ini menjadi dasar penetapan Hari Wayang Nasional dan merupakan bentuk pengakuan dunia atas nilai budaya wayang sebagai warisan tak benda Indonesia yang kaya dan berharga. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img src="C:\Users\danendra\Downloads\web sekul tes 2\ca.jpg" alt="Penghargaan terhadap Candi Borobudur">
+      <div class="info">
+        <h3><a href="https://www.schoolmedia.id/berita/4402/penghargaan-kepada-tokoh-dan-tenaga-pemugar-candi-borobudur-1973-1983" target="_blank">Informasi mengenai Candi Borobudur</a></h3>
+        <p>Candi Borobudur diakui UNESCO sebagai Situs Warisan Dunia pada 13 Desember 1991, menjadikannya situs budaya pertama Indonesia dalam daftar tersebut. Pengakuan ini diberikan karena Borobudur merupakan mahakarya arsitektur Buddhis, candi Buddha terbesar di dunia, dan simbol spiritual yang penting dengan ribuan panel relief dan stupa. </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <img src="C:\Users\danendra\Downloads\web sekul tes 2\ts.jpeg" alt="Penghargaan terhadap Tari Saman">
+      <div class="info">
+        <h3><a href="https://www.bbc.com/indonesia/berita_indonesia/2011/11/111124_samanunesco" target="_blank">Informasi mengenai Tari Saman</a></h3>
+        <p>Tari Saman mendapatkan penghargaan dari UNESCO sebagai Warisan Budaya Tak Benda yang Memerlukan Perlindungan Mendesak pada 24 November 2011. Pengakuan ini diresmikan dalam sidang keenam Komite Antar-Pemerintah untuk Pelindungan Warisan Budaya Takbenda UNESCO di Bali. Pengakuan ini menjadi tanggung jawab besar untuk melestarikan dan mempertahankan Tari Saman yang berasal dari Dataran Tinggi Gayo, Aceh, Indonesia. </p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Galeri Budaya Indonesia</p>
+  </footer>
+
+  <button id="toTop" title="Kembali ke atas">↑</button>
+
+  <script>
+    // Tombol scroll ke atas
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      toTop.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+    toTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+</body>
+</html>

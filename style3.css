@@ -1,0 +1,63 @@
+/* ===== DESAIN LOGO SECTION ===== */
+.logo-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.logo-box {
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 35px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.15);
+}
+
+.logo-box img {
+  width: 60%;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: transform 0.4s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Kartu penjelasan */
+.card {
+  border: 2px solid #c62828;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(198, 40, 40, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(198, 40, 40, 0.25);
+}
+
+.card h3 {
+  color: #c62828;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c62828;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card p {
+  text-align: justify;
+  color: #333;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .logo-box img {
+    width: 90%;
+  }
+}
